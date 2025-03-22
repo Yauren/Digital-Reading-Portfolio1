@@ -45,6 +45,15 @@ nav ul a:hover{
     opacity: 1;
 }
 
+nav img{
+    width: 40px;
+}
+
+nav a.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5em; /* Adjust spacing between the image and text if needed */
+}
 .logo{
     color: white;
     font-size: 2em;
@@ -340,3 +349,138 @@ body {
       opacity: 1;
     }
   }
+
+  /* Adjust google-drive icon size */
+.google-drive img {
+    width: 10px; /* Adjust width as needed */
+    height: auto;
+}
+
+.google-drive {
+    text-align: center;
+}
+
+.annotated-texts-copies h1{
+    text-align: center;
+    font-size: 3em;
+}
+
+/* Style the social media container so the icon and text align horizontally */
+.social-media {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+/* Reduce the Gmail icon size */
+.social-media img {
+    width: 20px !important;
+    max-width: 20px;
+    height: auto;
+}
+
+/* Update the #home section to have a background image with a black overlay */
+#home {
+    position: relative;
+    background: url('FEU-Tech-campus.jpg') no-repeat center center/cover;
+    /* Optionally remove the <img> tag in your HTML or hide it using CSS */
+}
+
+/* Create a pseudo-element for a black overlay */
+#home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.91); /* adjust opacity as needed */
+    z-index: 0;
+}
+
+/* Ensure content inside #home appears above the overlay */
+#home .info-box,
+#home .btn-box {
+    position: relative;
+    z-index: 1;
+}
+
+#home img {
+    position: relative;
+    z-index: 2;
+}
+
+#about {
+    position: relative;
+    background: url('water2.gif') no-repeat center center/cover;
+}
+
+#about::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.91); /* adjust opacity as needed */
+    z-index: 0;
+}
+
+#about .about-box {
+    position: relative;
+    z-index: 1;
+}
+
+#about img {
+    position: relative;
+    z-index: 2;
+}
+
+/* Ensure the home section is positioned relative */
+#home {
+    position: relative;
+}
+
+/* Create a gradient overlay at the bottom of the home section */
+#home::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px; /* Adjust the height of the gradient divider as needed */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), var(--second_background));
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* Create a gradient overlay at the bottom of the about section */
+#about::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px; /* Adjust height as needed for a smoother transition */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), var(--background));
+    pointer-events: none;
+    z-index: 2;
+}
+
+#about::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px; /* Adjust height as needed for a smoother transition */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), var(--background));
+    pointer-events: none;
+    z-index: 2;
+}
+
+.about-box h2{
+    font-size: 2em;
+    font-weight: 600;
+    color: white;
+}
